@@ -1,49 +1,51 @@
-# Implementaciones de Micro ResNet y Squeeze-and-Excitation desde Cero
+# 💻 Micro ResNet and Squeeze-and-Excitation Implementations from Scratch
 
-Este repositorio contiene una serie de *notebooks* de Jupyter que exploran la implementación y el entrenamiento de varias arquitecturas de redes residuales (ResNet) simplificadas o "micro", construidas completamente **desde cero** utilizando bibliotecas fundamentales como PyTorch para entender la arquitectura interna.
+This repository contains a series of Jupyter notebooks that explore the implementation and training of various simplified or "micro" Residual Network (ResNet) architectures, built completely **from scratch** using fundamental libraries like PyTorch to understand the internal architecture.
 
------
+---
 
-## 📂 Contenido del Repositorio
+## 📂 Repository Contents
 
-El repositorio se organiza en los siguientes *notebooks*, cada uno enfocado en una implementación específica:
+The repository is organized into the following notebooks, each focusing on a specific implementation:
 
 ### 1\. 🏗️ `Deep_Learning_Micro_Resnet.ipynb`
 
-Este *notebook* sienta las bases, mostrando la construcción y el entrenamiento de una **Micro ResNet básica**.
+This notebook lays the groundwork, showcasing the construction and training of a **Basic Micro ResNet**.
 
-  * **Objetivo Principal:** Entender el concepto fundamental del **bloque residual** (*residual block*) y su implementación para mitigar el problema del *vanishing gradient* en redes profundas.
-  * **Arquitectura:** Implementación de la ruta de identidad (*identity shortcut*) y las capas convolucionales básicas para una ResNet superficial.
+* **Main Objective:** To understand the fundamental concept of the **residual block** and its implementation to mitigate the *vanishing gradient* problem in deep networks.
+* **Architecture:** Implementation of the **identity shortcut** path and basic convolutional layers for a shallow ResNet.
 
------
+---
 
 ### 2\. 🚀 `Deep_Learning_Resnet_34.ipynb`
 
-Una extensión del *notebook* anterior, aquí se implementa una arquitectura más profunda, similar en principio a la conocida **ResNet-34**.
+An extension of the previous notebook, this one implements a deeper architecture, similar in principle to the well-known **ResNet-34**.
 
-  * **Objetivo Principal:** Construir y apilar **múltiples bloques residuales** (bloque básico de dos capas) para crear una red más profunda, gestionando el *downsampling* mediante *strides* o bloques de proyección.
-  * **Arquitectura:** Diseño de un modelo con 34 capas, explorando las diferentes etapas de la red y la transición entre ellas.
+* **Main Objective:** To build and stack **multiple residual blocks** (basic two-layer block) to create a deeper network, managing **downsampling** using *strides* or projection blocks.
+* **Architecture:** Design of a 34-layer model, exploring the different stages of the network and the transition between them.
 
------
+---
 
 ### 3\. 👑 `Deep_Learning_SE_Resnet_50.ipynb`
 
-Este *notebook* introduce una complejidad adicional: la implementación del **Bloque *Bottleneck*** (usado en ResNet-50) junto con el mecanismo de atención **Squeeze-and-Excitation (SE)**.
+This notebook introduces an additional complexity: the implementation of the **Bottleneck Block** (used in ResNet-50) along with the **Squeeze-and-Excitation (SE)** attention mechanism.
 
-  * **Objetivo Principal:**
-    1.  Implementar el **Bloque *Bottleneck*** (1x1, 3x3, 1x1) que reduce la complejidad computacional.
-    2.  Integrar el módulo **Squeeze-and-Excitation**, que permite a la red realizar una recalibración adaptativa de los canales de *features* (atención a nivel de canal).
-  * **Arquitectura:** Construcción de una red de 50 capas con los bloques *bottleneck* y el módulo SE integrado en cada bloque residual.
+* **Main Objective:**
+    1.  To implement the **Bottleneck Block** (1x1, 3x3, 1x1) which reduces computational complexity.
+    2.  To integrate the **Squeeze-and-Excitation** module, which allows the network to perform adaptive recalibration of the feature channels (**channel-wise attention**).
+* **Architecture:** Construction of a 50-layer network with *bottleneck* blocks and the SE module integrated into each residual block.
 
------
+---
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-Si tienes sugerencias, correcciones o deseas proponer una extensión, ¡eres bienvenido! Por favor, abre un *Issue* o envía un *Pull Request*.
+If you have suggestions, corrections, or want to propose an extension, you are welcome! Please open an *Issue* or send a *Pull Request*.
 
------
+---
 
 ## Author
 
 * **Juan Guillermo Gómez**
 * Linkedin: [@jggomezt](https://www.linkedin.com/in/jggomezt/)
+
+***
